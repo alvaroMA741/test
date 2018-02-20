@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex </title>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+<style>
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+@font-face {
+    font-family: 'fira';
+    src: url('FiraSansOT-Light.otf');
+}
+
+article p {
+	font-family: fira;
+	font-size: 36px;
+}
+
+aside p {
+	font-family: 'Caesar Dressing', cursive;
+	font-size: xx-large;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+#main {
+   height: 80%;
+   display: -webkit-flex;
+   display: flex;
+   flex-flow: row;
+}
+#main article {
+	background: #CFC;
+	flex: 3 1 60%;
+	order: 2;
+	border: 1px solid black;
+   border-radius: 14px;
+   margin: 5px;
+   	padding: 5px;
+}
+#main nav {
+	background: #CCF;
+	flex: 1 6 20%;
+	order: 1;
+   border: 1px solid black;
+   border-radius: 24px;
+}
+#main aside {
+	background: #CCF;
+	flex: 1 6 20%;
+	order: 3;
+   border: 1px solid black;
+   border-radius: 24px;
+   text-align: center;
+}
+header, footer {
+	display: block;
+	min-height: 10%;
+}
+
+.grad_header {
+	background: linear-gradient(to top, rgba(239,239,210,1) 0%, rgba(128,128,45,1) 100%);
+}
+
+.grad_footer {
+	background: linear-gradient(to top, rgba(50,116,45,1) 0%, rgba(239,239,210,1) 100%);
+}
+
+#izquierda {
+	padding-top: 15px;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction: column;
+}
+li { flex-grow: 1; }
+a {
+	display:block;
+	padding:1em;
+	background-color:LightGray ;
+	text-align:center;
+	margin-bottom:0.2em;
+	text-decoration:none;
+	color:#000000;
+}
+a:hover {background-color:LightCoral; }
+
+#cabecera ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction: row;
+}
+#cabecera li { flex-grow: 1; }
+#cabecera a {
+	display:block;
+	padding:0.3em;
+	background-color:LightGray ;
+	text-align:center;
+	margin-right:0.2em;
+	text-decoration:none;
+	color:#000000;
+}
+#cabecera a:hover {
+	background-color:LightCoral;
+}
+
+iframe {
+	margin-left: 30%;
+}
+</style>
+</head>
+<body>
+<header class="grad_header">
+	<h1>P&#225;gina personal de Alvaro Martin (encabezado nivel 1)</h1>
+	<nav id="cabecera">
+		<ul>
+			<li><a href="#">Opción 1</a></li>
+			<li><a href="#">Opción 2</a></li>
+			<li><a href="#">Opción 3</a></li>
+			<li><a href="#">Opción 4</a></li>
+		 </ul>
+	</nav>
+</header>
+<div id='main'>
+	<nav id="izquierda">
+		<ul>
+			<li><a href="#">Opción 1</a></li>
+			<li><a href="#">Opción 2</a></li>
+			<li><a href="#">Opción 3</a></li>
+			<li><a href="#">Opción 4</a></li>
+		</ul>
+	</nav>
+	<article>
+		<h2>Encabezado nivel 2</h2>
+		<p>PRUEBA DE <strong>TEXTO</strong> TIPOGRAFÍA <em>Fira Sans</em></p>
+		<p>probando caracteres especiales como por ejemplo &#60; o &#62; que son apertura y cierre para las etiquetas HTML</p>
+		<iframe height="170px" src="https://www.youtube.com/embed/43zLcvLjrZc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	 </article>
+	<aside>
+		<p>Prueba de texto Google fonts.</p>
+		<img src="http://www.rockalyrics.com/images/discos/editors/thebackroom.jpeg" width="150px"/><br>
+		prueba imagen bitmap<br><br>
+		<img src="https://tse1.mm.bing.net/th?id=OIP.gwhfPUpf2sGBQd59qd3ZigHaHa&pid=Api" width="150px"/><br>
+		prueba imagen vectorial
+	</aside>
+</div>
+<footer class="grad_footer">
+	<h3>footer (encabezado nivel 3)</h3>
+</footer>
+</body>
+</html>
